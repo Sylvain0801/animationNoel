@@ -1,7 +1,50 @@
 body {
-  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: url(media/bg-3.jpg) no-repeat center/cover;
 }
-
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 10vh;
+  width: 100%;
+  background-color: #0f0f0f;
+}
+.set-color {
+  color: antiquewhite;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 5px antiquewhite;
+  margin: 2vh 10px;
+}
+.color {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+  box-shadow: 1px 1px 5px antiquewhite;
+}
+.blue {
+  background-color: blue;
+}
+.red {
+  background-color: red;
+}
+.orangered {
+  background-color: orangered;
+}
+.blueviolet {
+  background-color: blueviolet;
+}
 .frame {
   display: inline-block;
   padding: 0;
@@ -14,7 +57,7 @@ body {
 .frame canvas {
   display: block;
   padding: 60px 0px 0px 0px;
-  background-color: black;
+  background-color: transparent;
 }
 
 #tree{

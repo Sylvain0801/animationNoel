@@ -1,11 +1,14 @@
+
 (function() {
   var SwirlNode, Tree, TreeSwirl, height, swirls, width,
-    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
-
+  __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+  
   width = 600;
   height = 450;
 
-  swirls = [
+  const button = document.getElementsByClassName('color')
+  
+  var swirls = [
     {
       color: 'gold',
       nodes: 300,
@@ -17,7 +20,7 @@
       speed: 1,
       radius: 1.5
     }, {
-      color: 'blue',
+      color: 'red',
       nodes: 80,
       speed: -3,
       radius: 6
@@ -28,8 +31,9 @@
       radius: 3
     }
   ];
-
+  
   Tree = (function() {
+    
     function Tree(w, h, swirls) {
       this.run = __bind(this.run, this);
       var i;
@@ -189,6 +193,14 @@
     return SwirlNode;
 
   })();
+
+  for (let item of button) {
+    item.addEventListener('click', (e) => {
+      let newColor = e.target.className.split(' ')
+      swirls[2]['color'] = newColor[1]
+      new Tree(width, height, swirls);
+    })
+  }
 
   new Tree(width, height, swirls);
 
